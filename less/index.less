@@ -62,6 +62,11 @@ html, body {
 	background-color: none;
 	font-family: 'Times New Roman', Times, serif;
 	margin: 0 auto;
+	background: rgb(243, 240, 240);
+}
+
+.everything {
+	background: rgb(255, 255, 255);
 }
 
 
@@ -74,7 +79,7 @@ html, body {
 	margin-right: 15px;
 }
 
-.baseboxes(){
+.midboxes(){
 	width: 58%;
 	float: right;
 	text-align: left;
@@ -95,20 +100,23 @@ html, body {
 /* Element specific for Headers */
 
 h1 {
-	font-size: 2.3rem; 
+	font-size: 1.8rem; 
 	font-weight: 700;
 }
 
 
 h2 {
-	font-size: 1.4rem; 
+	font-size: 1.3rem; 
 	font-weight: 600;
 }
 
 h3 {
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 }
 
+p {
+	color: pink;
+}
 
 /* Actual Website Resume Code */
 
@@ -120,21 +128,29 @@ header {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	background-color: green;
-	margin-top: 20px;
+	margin-top: 15px;
+	
+	.img {
+		margin-top:50px;
+	}
+
+	.name {
+		margin-top:10px;
+	}
+
    }
 
 
 
 main { 
- background: purple;
+
 display: flex;
 flex-direction: row;
-margin-top: 20px;
+margin-top: 80px;
  
 p {
 	line-height: 1.5rem;
-	background: yellow;
+	
 }
 
 
@@ -142,24 +158,34 @@ p {
 
 nav {
 	.navboxes;
+
+
+	h3 {
+		font-weight: 700;
+		margin-top: 20px;
+	}
+
+	.items {
+		font-size: 0.9rem;
+	}
+
 }
 
 
+
 article {
-	background: red;
-	.baseboxes;
+	.midboxes;
 
 .middle {
-		background: dodgerblue;
-		margin-bottom: 25px;
+		
+		margin-bottom: 50px;
 		padding-left: 15px;
 		border-left: 2px solid black;
-	}
+}
+	
 
 	.tittle {
-		.fortittles;
-		background: pink;
-			
+		.fortittles;	
 	}
 
 	.tittleimg {
@@ -168,8 +194,21 @@ article {
 		width: 22px;
 	}
 
-	 p {
-		color: grey;
-	}
+h3 {
+	margin-top: 15px;
+	font-weight: 500;
+}
+
+h4 {
+	font-weight: 500;
+}
+
+
 
 }
+
+p {
+	color: rgb(145, 145, 145);
+	font-size: 0.82rem;
+}
+

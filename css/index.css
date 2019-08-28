@@ -137,19 +137,26 @@ body {
   background-color: none;
   font-family: 'Times New Roman', Times, serif;
   margin: 0 auto;
+  background: #f3f0f0;
+}
+.everything {
+  background: #ffffff;
 }
 /* Mix-ins */
 /* Element specific for Headers */
 h1 {
-  font-size: 2.3rem;
+  font-size: 1.8rem;
   font-weight: 700;
 }
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 600;
 }
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+}
+p {
+  color: pink;
 }
 /* Actual Website Resume Code */
 header {
@@ -159,18 +166,21 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background-color: green;
-  margin-top: 20px;
+  margin-top: 15px;
+}
+header .img {
+  margin-top: 50px;
+}
+header .name {
+  margin-top: 10px;
 }
 main {
-  background: purple;
   display: flex;
   flex-direction: row;
-  margin-top: 20px;
+  margin-top: 80px;
 }
 main p {
   line-height: 1.5rem;
-  background: yellow;
 }
 nav {
   width: 20%;
@@ -178,16 +188,21 @@ nav {
   text-align: center;
   margin-right: 15px;
 }
+nav h3 {
+  font-weight: 700;
+  margin-top: 20px;
+}
+nav .items {
+  font-size: 0.9rem;
+}
 article {
-  background: red;
   width: 58%;
   float: right;
   text-align: left;
   font-size: 0.9rem;
 }
 article .middle {
-  background: dodgerblue;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
   padding-left: 15px;
   border-left: 2px solid black;
 }
@@ -197,13 +212,20 @@ article .tittle {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  background: pink;
 }
 article .tittleimg {
   margin-right: 10px;
   height: 25px;
   width: 22px;
 }
-article p {
-  color: grey;
+article h3 {
+  margin-top: 15px;
+  font-weight: 500;
+}
+article h4 {
+  font-weight: 500;
+}
+p {
+  color: #919191;
+  font-size: 0.82rem;
 }
