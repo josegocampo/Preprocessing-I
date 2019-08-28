@@ -1,3 +1,5 @@
+
+
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -20,7 +22,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -49,12 +51,125 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+
 * {
     box-sizing: border-box;
 }
 
 html, body {
+	width: 900px;
 	height: 100%;
-	background-color: red;
+	background-color: none;
+	font-family: 'Times New Roman', Times, serif;
+	margin: 0 auto;
 }
 
+
+/* Mix-ins */
+
+.navboxes(){
+	width: 20%;
+	float: left;
+	text-align: center;
+	margin-right: 15px;
+}
+
+.baseboxes(){
+	width: 58%;
+	float: right;
+	text-align: left;
+	font-size: 0.9rem;
+}
+
+.fortittles() {
+	padding-left: 0rem;
+	padding-bottom: 0.3rem;
+	display:flex;
+	flex-direction: row;
+	justify-content: flex-start;
+
+}
+
+
+
+/* Element specific for Headers */
+
+h1 {
+	font-size: 2.3rem; 
+	font-weight: 700;
+}
+
+
+h2 {
+	font-size: 1.4rem; 
+	font-weight: 600;
+}
+
+h3 {
+	font-size: 1.2rem;
+}
+
+
+/* Actual Website Resume Code */
+
+
+header {
+	width: 100%;
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	background-color: green;
+	margin-top: 20px;
+   }
+
+
+
+main { 
+ background: purple;
+display: flex;
+flex-direction: row;
+margin-top: 20px;
+ 
+p {
+	line-height: 1.5rem;
+	background: yellow;
+}
+
+
+}
+
+nav {
+	.navboxes;
+}
+
+
+article {
+	background: red;
+	.baseboxes;
+
+.middle {
+		background: dodgerblue;
+		margin-bottom: 25px;
+		padding-left: 15px;
+		border-left: 2px solid black;
+	}
+
+	.tittle {
+		.fortittles;
+		background: pink;
+			
+	}
+
+	.tittleimg {
+		margin-right: 10px;
+		height: 25px;
+		width: 22px;
+	}
+
+	 p {
+		color: grey;
+	}
+
+}
