@@ -126,6 +126,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+/* Mix-ins and Variables */
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
@@ -135,28 +136,35 @@ body {
   width: 900px;
   height: 100%;
   background-color: none;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Roboto Condensed', sans-serif;
   margin: 0 auto;
-  background: #f3f0f0;
+  background: #e2e2e2;
+}
+@media (max-width: 500px) {
+  html,
+  body {
+    width: 500px;
+  }
 }
 .everything {
-  background: #ffffff;
+  background: white;
 }
-/* Mix-ins */
+@media (max-width: 500px) {
+  .everything {
+    width: 500px;
+  }
+}
 /* Element specific for Headers */
 h1 {
-  font-size: 1.8rem;
-  font-weight: 700;
-}
-h2 {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: 600;
 }
-h3 {
+h2 {
   font-size: 1.1rem;
+  font-weight: 500;
 }
-p {
-  color: pink;
+h3 {
+  font-size: 0.9rem;
 }
 /* Actual Website Resume Code */
 header {
@@ -170,9 +178,15 @@ header {
 }
 header .img {
   margin-top: 50px;
+  border-radius: 30%;
 }
 header .name {
   margin-top: 10px;
+}
+@media (max-width: 500px) {
+  header {
+    width: 100%;
+  }
 }
 main {
   display: flex;
@@ -180,10 +194,15 @@ main {
   margin-top: 80px;
 }
 main p {
-  line-height: 1.5rem;
+  line-height: 1.4rem;
+}
+@media (max-width: 500px) {
+  main {
+    width: 100%;
+  }
 }
 nav {
-  width: 20%;
+  width: 23%;
   float: left;
   text-align: center;
   margin-right: 15px;
@@ -192,8 +211,43 @@ nav h3 {
   font-weight: 700;
   margin-top: 20px;
 }
+nav a {
+  text-decoration: none;
+  color: inherit;
+}
 nav .items {
-  font-size: 0.9rem;
+  line-height: 1.3rem;
+  font-size: 0.8rem;
+  color: white;
+  height: 40px;
+}
+nav .items:hover {
+  animation: blabla 5s;
+}
+@keyframes blabla {
+  0% {
+    color: white;
+  }
+  10% {
+    color: #e0e0e0;
+  }
+  40% {
+    color: #747474;
+  }
+  60% {
+    color: #333333;
+  }
+  80% {
+    color: black;
+  }
+}
+nav .portfolio {
+  align-self: bottom;
+}
+@media (max-width: 500px) {
+  nav {
+    width: 31%;
+  }
 }
 article {
   width: 58%;
@@ -221,11 +275,18 @@ article .tittleimg {
 article h3 {
   margin-top: 15px;
   font-weight: 500;
+  font-size: 1rem;
 }
 article h4 {
-  font-weight: 500;
+  font-weight: 450;
+  font-size: 0.8rem;
 }
-p {
+@media (max-width: 500px) {
+  article {
+    width: 57%;
+  }
+}
+article p {
   color: #919191;
-  font-size: 0.82rem;
+  font-size: 0.75rem;
 }

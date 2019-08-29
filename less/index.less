@@ -50,30 +50,15 @@ table {
 	border-spacing: 0;
 }
 
-/* Set every element's box-sizing to border-box */
-
-* {
-    box-sizing: border-box;
-}
-
-html, body {
-	width: 900px;
-	height: 100%;
-	background-color: none;
-	font-family: 'Times New Roman', Times, serif;
-	margin: 0 auto;
-	background: rgb(243, 240, 240);
-}
-
-.everything {
-	background: rgb(255, 255, 255);
-}
 
 
-/* Mix-ins */
+
+
+
+/* Mix-ins and Variables */
 
 .navboxes(){
-	width: 20%;
+	width: 23%;
 	float: left;
 	text-align: center;
 	margin-right: 15px;
@@ -92,7 +77,40 @@ html, body {
 	display:flex;
 	flex-direction: row;
 	justify-content: flex-start;
+}
 
+@paracolor:rgb(145, 145, 145);
+
+
+
+
+/* Set every element's box-sizing to border-box */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+	width: 900px;
+	height: 100%;
+	background-color: none;
+	font-family: 'Roboto Condensed', sans-serif;
+	margin: 0 auto;
+	background: rgb(226, 226, 226);
+
+	@media (max-width: 500px) {
+		width:500px;
+	}
+
+	
+}
+
+.everything {
+background: white;
+
+	@media (max-width: 500px) {
+		width:500px;
+	}
 }
 
 
@@ -100,22 +118,18 @@ html, body {
 /* Element specific for Headers */
 
 h1 {
-	font-size: 1.8rem; 
-	font-weight: 700;
+	font-size: 1.6rem; 
+	font-weight: 600;
 }
 
 
 h2 {
-	font-size: 1.3rem; 
-	font-weight: 600;
+	font-size: 1.1rem; 
+	font-weight: 500;
 }
 
 h3 {
-	font-size: 1.1rem;
-}
-
-p {
-	color: pink;
+	font-size: 0.9rem;
 }
 
 /* Actual Website Resume Code */
@@ -131,13 +145,21 @@ header {
 	margin-top: 15px;
 	
 	.img {
+		
 		margin-top:50px;
+		border-radius: 30%;
 	}
 
 	.name {
 		margin-top:10px;
 	}
 
+	@media (max-width: 500px) {
+		width:100%;
+	}
+
+
+	
    }
 
 
@@ -147,27 +169,84 @@ main {
 display: flex;
 flex-direction: row;
 margin-top: 80px;
- 
+
 p {
-	line-height: 1.5rem;
+	line-height: 1.4rem;
 	
 }
 
+@media (max-width: 500px) {
+	width:100%;
+}
 
 }
 
-nav {
+nav { 
 	.navboxes;
-
 
 	h3 {
 		font-weight: 700;
 		margin-top: 20px;
 	}
 
-	.items {
-		font-size: 0.9rem;
+	a {
+		text-decoration: none;
+		color: inherit;
 	}
+
+
+	.items {
+		line-height: 1.3rem;
+		font-size: 0.8rem;
+		color: white;
+		height: 40px;
+		
+	}
+
+	
+
+	
+.items:hover {
+	animation: blabla 5s; 
+	
+}
+
+@keyframes blabla {
+
+	0% {
+		color: white;
+	}
+
+	10% {
+		color: rgb(224, 224, 224);
+	}
+
+	40% {
+		color: rgb(116, 116, 116);
+	}
+
+	60% {
+		color: rgb(51, 51, 51);
+	}
+
+	80%{ 
+		color: black;
+	}
+
+}
+
+
+.portfolio {
+	align-self: bottom;
+}
+
+
+
+@media (max-width: 500px) {
+	width: 31%;
+	
+}
+
 
 }
 
@@ -182,6 +261,8 @@ article {
 		padding-left: 15px;
 		border-left: 2px solid black;
 }
+
+
 	
 
 	.tittle {
@@ -197,18 +278,29 @@ article {
 h3 {
 	margin-top: 15px;
 	font-weight: 500;
+	font-size: 1rem;
 }
 
 h4 {
-	font-weight: 500;
+	font-weight: 450;
+	font-size: 0.8rem;
+
+}
+
+@media (max-width: 500px) {
+	width: 57%;
+
 }
 
 
 
-}
+
+
 
 p {
-	color: rgb(145, 145, 145);
-	font-size: 0.82rem;
+	color: @paracolor;
+	font-size: 0.75rem;
 }
 
+
+}
